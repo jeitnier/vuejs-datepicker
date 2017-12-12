@@ -412,13 +412,13 @@ export default {
       const date = new Date(timestamp)
       this.selectedDate = new Date(date)
       this.setPageDate(date)
-      this.$emit('selected', new Date(date))
-      this.$emit('input', new Date(date))
+      this.$emit('selected', this, new Date(date))
+      this.$emit('input', this, new Date(date))
     },
     clearDate () {
       this.selectedDate = null
-      this.$emit('selected', null)
-      this.$emit('input', null)
+      this.$emit('selected', this, null)
+      this.$emit('input', this, null)
       this.$emit('cleared')
     },
     /**
