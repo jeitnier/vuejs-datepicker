@@ -26,8 +26,7 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "prepublish": "npm run build",
-    "install": "yarn-git install"
+    "prepublish": "npm run build"
   },
   "gitDependencies": {
     "private-package-name": "git@github.com:jeitnier/vuejs-datepicker.git",
