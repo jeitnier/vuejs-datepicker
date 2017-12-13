@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-datepicker",
+  "name": "vuejs-datepicker-eitnier",
   "version": "0.9.21",
   "description": "A simple Vue.js datepicker component. Supports disabling of dates, inline mode, translations",
   "keywords": [
@@ -26,13 +26,19 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "prepare": "npm run build"
+    "prepublish": "npm run build",
+    "install": "yarn-git install"
   },
-  "dependencies": {},
+  "gitDependencies": {
+    "private-package-name": "git@github.com:jeitnier/vuejs-datepicker.git",
+    "public-package-name": "https://github.com/jeitnier/vuejs-datepicker.git"
+  },
+  "dependencies": {
+    "yarn-git-install": "^0.4.7"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
-    "babel-runtime": "^6.0.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-istanbul": "^4.1.1",
@@ -40,6 +46,7 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "babel-register": "^6.22.0",
+    "babel-runtime": "^6.0.0",
     "chai": "^3.5.0",
     "chalk": "^1.1.3",
     "connect-history-api-fallback": "^1.3.0",
