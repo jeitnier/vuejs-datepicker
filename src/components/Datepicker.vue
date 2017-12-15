@@ -119,7 +119,9 @@ export default {
     },
     name: String,
     refName: String,
-    id: String,
+    id: {
+      type: [String, Number]
+    },
     format: {
       type: [String, Function],
       default: 'dd MMM yyyy'
